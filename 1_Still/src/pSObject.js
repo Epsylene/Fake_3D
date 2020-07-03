@@ -1,6 +1,6 @@
 class pSObject {
     constructor(x, y, z, l) {
-        this.pos = {x, y, z};
+        this.pos = new Vector(x, y, z);
         this.l = l;
     }
 
