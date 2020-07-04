@@ -1,14 +1,13 @@
 class pSObject {
     constructor() {
-        this.portals = []
-        this.t = 0;
-        this.fl = 1;
+        this.portals = [] //Tableau dynamique contenant nos portails
+        this.t = 0; //Compteur utilisé dans update() pour éviter
+                    // de créer trop de portails d'un coup
+        this.fl = 1; //Distance focale
     }
 
     randomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+        return Math.round(random(min, max));
     }
 
     addPortal() {
